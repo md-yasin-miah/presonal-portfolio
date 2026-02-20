@@ -23,6 +23,7 @@ const navItems = [
 export function Header() {
   const pathname = usePathname();
   const [isVisible, setIsVisible] = useState(true);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const lastScrollY = useRef(0);
 
   useEffect(() => {
@@ -40,6 +41,17 @@ export function Header() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Close mobile menu on route change
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [pathname]);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [mobileOpen]);
 
   const isActive = (href: string) => {
     if (href === "/") return pathname === "/";
@@ -63,10 +75,10 @@ export function Header() {
             <Link
               href="/"
               className="flex items-center gap-4"
-              aria-label="Steven D. Park - Home"
+              aria-label="Steven D. Parks - Home"
             >
               <Image
-                alt="Steven D. Park Logo"
+                alt="Steven D. ParkS Logo"
                 className="h-6 w-auto"
                 src={LOGO_SRC}
                 width={120}
@@ -74,9 +86,11 @@ export function Header() {
                 unoptimized
               />
               <span className="font-sans font-semibold text-[11px] tracking-[0.35em] uppercase text-brand-black">
-                Steven D. Park
+                Steven D. Parks
               </span>
             </Link>
+
+            {/* Desktop nav */}
             <div className="hidden lg:flex items-center flex-wrap gap-5">
               {navItems.map((item) => {
                 const active = isActive(item.href);
@@ -102,6 +116,64 @@ export function Header() {
                 );
               })}
             </div>
+
+            {/* Mobile hamburger */}
+            <button
+              className="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-[6px] focus:outline-none"
+              onClick={() => setMobileOpen((prev) => !prev)}
+              aria-label={mobileOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileOpen}
+            >
+              <span
+                className={cn(
+                  "block w-6 h-[1.5px] bg-brand-black transition-all duration-300 origin-center",
+                  mobileOpen && "rotate-45 translate-y-[7.5px]",
+                )}
+              />
+              <span
+                className={cn(
+                  "block w-6 h-[1.5px] bg-brand-black transition-all duration-300",
+                  mobileOpen && "opacity-0",
+                )}
+              />
+              <span
+                className={cn(
+                  "block w-6 h-[1.5px] bg-brand-black transition-all duration-300 origin-center",
+                  mobileOpen && "-rotate-45 -translate-y-[7.5px]",
+                )}
+              />
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile menu drawer */}
+        <div
+          className={cn(
+            "lg:hidden overflow-hidden transition-all duration-300 ease-in-out bg-white border-t border-gray-100",
+            mobileOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0",
+          )}
+        >
+          <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col gap-1">
+            {navItems.map((item) => {
+              const active = isActive(item.href);
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setMobileOpen(false)}
+                  className={cn(
+                    "py-3 text-[11px] font-semibold uppercase tracking-[0.25em] border-b border-gray-50 transition-colors duration-200",
+                    item.isButton
+                      ? "mt-4 border border-brand-mahogany text-center py-4 text-brand-mahogany hover:bg-brand-mahogany hover:text-white"
+                      : active
+                        ? "text-brand-mahogany"
+                        : "text-brand-black hover:text-brand-mahogany",
+                  )}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </div>
         </div>
       </nav>

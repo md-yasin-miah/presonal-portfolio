@@ -19,22 +19,22 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://stevendpark.com"),
+  metadataBase: new URL("https://stevendparks.com"),
   title: {
-    default: "Steven D. Park | Real Estate Advisory",
-    template: "%s | Steven D. Park",
+    default: "Steven D. Parks | Real Estate Advisory",
+    template: "%s | Steven D. Parks",
   },
   description:
     "Implementing institutional-grade frameworks for high-net-worth real estate portfolios. Professional guidance for sophisticated investors who demand precision.",
   keywords: [
-    "Steven D. Park",
+    "Steven D. Parks",
     "real estate advisory",
     "luxury real estate",
     "investment strategies",
     "multifamily syndication",
     "high-net-worth",
   ],
-  authors: [{ name: "Steven D. Park" }],
+  authors: [{ name: "Steven D. Parks" }],
   openGraph: {
     type: "website",
   },

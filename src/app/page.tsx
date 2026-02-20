@@ -50,7 +50,7 @@ export default function HomePage() {
               <Image
                 alt="Steven D. Park Portrait"
                 className="w-full h-full object-cover shadow-2xl"
-                src={HERO_IMAGE}
+                src='/steven.jpg'
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
