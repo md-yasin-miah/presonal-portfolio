@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>All Listings | Steven D. Parks Real Estate</title>
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Playfair Display -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+          },
+        },
+      },
+    }
+  </script>
+<!-- Custom Styles for specific refinements -->
+<style data-purpose="typography">
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #ffffff;
+      color: #000000;
+    }
+    .light-serif {
+      font-weight: 400;
+    }
+  </style>
+<style data-purpose="layout">
+    /* Ensure property images maintain aspect ratio */
+    .property-img-container {
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+    }
+    .property-img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .property-img-container:hover img {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body class="antialiased">
+<!-- BEGIN: MainHeader -->
+<header class="border-b border-gray-100 py-6 px-4 md:px-12 bg-white sticky top-0 z-50">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+<!-- Logo Section -->
+<div class="flex items-center gap-4" data-purpose="brand-identity">
+<img alt="Steven Parks Logo" class="h-16 w-16 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtl1rMuhXVHZVcWl8NuozYb5Ni7qcw1fMJ4Ks0x1Zu8-RE8tWFnRuK-1-D04rQ-u-dsjZBc1aMoN3CP5KU2WlvW5xKNjycoiUXmVZcrYZngLT_GQnS-MkRu3oTIOd0KJiwcEyLhfv_eA1wmjNfzKwaFGAbZKbsxe8dj8hPoGogaeWGqpyV4kg8w4Wc4uPbVf4FVZOkbCeTnat9b3NcES7RntYrGSygYjKbAjYb-99Bn9E_HPof8PFECo9_HU03B90ReSLvRajwIko"/>
+<div class="flex flex-col">
+<span class="text-xl tracking-widest uppercase font-medium">Steven D. Parks</span>
+<span class="text-[10px] uppercase tracking-[0.3em] text-gray-500">Luxury Real Estate Specialist</span>
+</div>
+</div>
+<!-- Navigation -->
+<nav class="flex gap-8 text-sm uppercase tracking-widest font-light" data-purpose="main-nav">
+<a class="hover:text-gray-500 transition-colors" href="#">Home</a>
+<a class="border-b border-black" href="#">Listings</a>
+<a class="hover:text-gray-500 transition-colors" href="#">About</a>
+<a class="hover:text-gray-500 transition-colors" href="#">Contact</a>
+</nav>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: HeroSection -->
+<section class="py-12 px-4 md:px-12 max-w-7xl mx-auto text-center border-b border-gray-50">
+<h1 class="text-4xl md:text-5xl font-light mb-4">Curated Residences</h1>
+<p class="text-gray-500 italic max-w-2xl mx-auto">Discover a collection of prestigious properties selected for their unique character and exceptional quality.</p>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: FilterSection -->
+<div class="sticky top-[108px] bg-white z-40 border-b border-gray-100 shadow-sm" data-purpose="listing-filters">
+<div class="max-w-7xl mx-auto px-4 md:px-12 py-6 flex flex-wrap items-center justify-center gap-8">
+<!-- Location Filter -->
+<div class="flex items-center gap-3">
+<label class="text-[10px] uppercase tracking-widest text-gray-400" for="location">Location</label>
+<select class="border-none bg-transparent text-sm focus:ring-0 cursor-pointer font-light" id="location">
+<option>All Locations</option>
+<option>Beverly Hills</option>
+<option>Malibu</option>
+<option>Santa Monica</option>
+<option>Pacific Palisades</option>
+</select>
+</div>
+<!-- Price Filter -->
+<div class="flex items-center gap-3">
+<label class="text-[10px] uppercase tracking-widest text-gray-400" for="price">Price Range</label>
+<select class="border-none bg-transparent text-sm focus:ring-0 cursor-pointer font-light" id="price">
+<option>All Prices</option>
+<option>$1M - $5M</option>
+<option>$5M - $10M</option>
+<option>$10M - $20M</option>
+<option>$20M+</option>
+</select>
+</div>
+<!-- Property Type Filter -->
+<div class="flex items-center gap-3">
+<label class="text-[10px] uppercase tracking-widest text-gray-400" for="type">Property Type</label>
+<select class="border-none bg-transparent text-sm focus:ring-0 cursor-pointer font-light" id="type">
+<option>All Types</option>
+<option>Residential</option>
+<option>Commercial</option>
+<option>Hospitality</option>
+<option>Land</option>
+</select>
+</div>
+</div>
+</div>
+<!-- END: FilterSection -->
+<!-- BEGIN: ListingsGrid -->
+<main class="max-w-7xl mx-auto px-4 md:px-12 py-16" data-purpose="listings-container">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+<!-- Listing 1 -->
+<article class="group" data-purpose="property-card">
+<div class="property-img-container mb-6">
+<img alt="Modern white estate with pool" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHk_FPweOsOTUCvJJkFXQTKGSP_AtCOiXgQLiA8EiVtjgE1xvfUrtPlkpSiNvmzwXxRRQk_KvZ3k0LYo0irvYW-dC6GXyiwbDzbdDcKRxQKG3WPvD2iv5UvnDKOP73oiDorsqHKzeyaXsUV7pdPRYuhghpepVddsWBpInXll9YiqBilszYsAUOAH1OD9CwBubZIZpZ6wZ6Sen4GYSUhWB764Er7Yq8AMKLMqDKoEjyKAp8evp-MfQgPIC29JqAREJIzRKJNqzl0VE"/>
+</div>
+<div class="space-y-2">
+<h3 class="text-xl font-light tracking-wide uppercase">The Glass Pavilion</h3>
+<p class="text-sm text-gray-400 tracking-wider">Malibu, California</p>
+<div class="flex justify-between items-baseline border-t border-gray-100 pt-3 mt-4">
+<span class="text-lg">$12,500,000</span>
+<span class="text-[10px] uppercase tracking-widest text-gray-400">5 Bed | 6 Bath</span>
+</div>
+</div>
+</article>
+<!-- Listing 2 -->
+<article class="group" data-purpose="property-card">
+<div class="property-img-container mb-6">
+<img alt="Classic luxury manor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBm4ztCG64-1YWisXrP-MKNA61uNuePuoHfQkHGvL9zwCUAEbzgU477wJ5xXtjKrV_X0Fk_q7hPZ8V8BXjku3Yn_uTZR9FfAIvc46IMyFdji72zrddad0Bp0EgUcDj0RAZpUyT2BZV9vNpy3IdAyVG0w7ZIneUJ2ILS1Uu_9o-b-cuQTXeRbl40_BBWc3fnTvGI7ADPp41rQPbE0gLpzAGXHQF86M6Zg49qAUt6D5OTKPonRgPudWaBUrqFV00LKeNFFZBpcxv5cP8"/>
+</div>
+<div class="space-y-2">
+<h3 class="text-xl font-light tracking-wide uppercase">Oak Ridge Estate</h3>
+<p class="text-sm text-gray-400 tracking-wider">Beverly Hills, California</p>
+<div class="flex justify-between items-baseline border-t border-gray-100 pt-3 mt-4">
+<span class="text-lg">$18,750,000</span>
+<span class="text-[10px] uppercase tracking-widest text-gray-400">7 Bed | 9 Bath</span>
+</div>
+</div>
+</article>
+<!-- Listing 3 -->
+<article class="group" data-purpose="property-card">
+<div class="property-img-container mb-6">
+<img alt="High rise penthouse view" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTidzqa_ph0Ge_lU08VdpmNkOxdI-ZZFn0ZLTb56VsJuaV09-U2ZsBHEH7_1dtstImRi0kk5742t_5Y1XlB4VEMNZJsiJ-JJ2mwCLgezpzxQ7mov7haSmn8wAtALwz6EJnTDaEAfB4YOiDra3VgisG-dCd0dqVwHnfE4VZoe53k428VI0avERe5SQC7M9LLOMS3Y-PzDt4sHHtS3gqscZLOXbdu0K9GLoo2CPo_gDB_Vy5swUDwsbSfGAZse5yX7RfwsG7Yl6-Wjo"/>
+</div>
+<div class="space-y-2">
+<h3 class="text-xl font-light tracking-wide uppercase">The Zenith Penthouse</h3>
+<p class="text-sm text-gray-400 tracking-wider">Santa Monica, California</p>
+<div class="flex justify-between items-baseline border-t border-gray-100 pt-3 mt-4">
+<span class="text-lg">$8,900,000</span>
+<span class="text-[10px] uppercase tracking-widest text-gray-400">3 Bed | 4 Bath</span>
+</div>
+</div>
+</article>
+<!-- Listing 4 -->
+<article class="group" data-purpose="property-card">
+<div class="property-img-container mb-6">
+<img alt="Oceanfront property" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2N1nHfoFoXqKr4Snvsd_zDgWGramAtc8HnkeMTkDzGqDwHjq8O3R1wnLxMvseYqkSNb0wh7Jm6nbY18KezCnFKMqQC-Ua5jg5MsaULyvMiMawuYhOeNyiGd_knz0ebYmFk6SRH9JNOv917VOB6vthB1V_Q-pMPnktOi6t6MGexK9YTlDcyDlKX8YUFHm7veolDp4GjW_j65c9S2l2Rr0YSzfHNMthZAhGJIckMS0--JQyw1kzA6fOve37u02FkINGmr5F-KLWM_4"/>
+</div>
+<div class="space-y-2">
+<h3 class="text-xl font-light tracking-wide uppercase">Ocean Crest Residence</h3>
+<p class="text-sm text-gray-400 tracking-wider">Pacific Palisades, California</p>
+<div class="flex justify-between items-baseline border-t border-gray-100 pt-3 mt-4">
+<span class="text-lg">$24,000,000</span>
+<span class="text-[10px] uppercase tracking-widest text-gray-400">6 Bed | 8 Bath</span>
+</div>
+</div>
+</article>
+<!-- Listing 5 -->
+<article class="group" data-purpose="property-card">
+<div class="property-img-container mb-6">
+<img alt="Minimalist villa" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgaVZ7IXYHm3srOJe-3wJ4yeej42PYHKuBrTKn9qLl8QEqr6x_gtxiSmMf10NbePMewOYi0mFLkpSbtRrw3smgGjjwPwH1yK851iyN0oOM_SaniI8McdgzSgtye6CUIEE0zGjwwu-m8Sg3sY-cFYCR59czqxBIbi_JMbM5T4kob2mN9cjRvyvBC3HE9u-xURd8XL_KmzTDJT9dAeicae1IY59TDDxXNX6XlCLB6a8d2BKyVfS_HZ-IWS-QBQf3QPwcTv_mwFraWhM"/>
+</div>
+<div class="space-y-2">
+<h3 class="text-xl font-light tracking-wide uppercase">Shadow Hills Villa</h3>
+<p class="text-sm text-gray-400 tracking-wider">Bel Air, California</p>
+<div class="flex justify-between items-baseline border-t border-gray-100 pt-3 mt-4">
+<span class="text-lg">$15,200,000</span>
+<span class="text-[10px] uppercase tracking-widest text-gray-400">5 Bed | 5 Bath</span>
+</div>
+</div>
+</article>
+<!-- Listing 6 -->
+<article class="group" data-purpose="property-card">
+<div class="property-img-container mb-6">
+<img alt="Spanish revival mansion" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgmdaNL_7wz1cRp_X5euwQspnBv1XUHBTq96I4ImXAnKe9Qp7MfGawAHRoIFa_pE6kxMtRIhg41gvhDavhUr8eBLu6wVz8DaHosU3LJnfwwyhJQcTisUfe6IRTC0wHrpqD1jSXoMxMK7eZBWFaek3wNXLFEAUhS2ceWgioLrqAj5lwm_-apX7-ZCB3Bz_GiTUO8XXC1DMTyY2xj1zbQ65YHsTeZOrTac-E3M_j3RJowM7mvur2FBiK_EMB8j83w_CzbslkBo2Rrsk"/>
+</div>
+<div class="space-y-2">
+<h3 class="text-xl font-light tracking-wide uppercase">Casa De La Guerra</h3>
+<p class="text-sm text-gray-400 tracking-wider">Santa Barbara, California</p>
+<div class="flex justify-between items-baseline border-t border-gray-100 pt-3 mt-4">
+<span class="text-lg">$9,750,000</span>
+<span class="text-[10px] uppercase tracking-widest text-gray-400">4 Bed | 4 Bath</span>
+</div>
+</div>
+</article>
+</div>
+<!-- Pagination -->
+<div class="mt-20 flex justify-center items-center gap-6" data-purpose="pagination">
+<button class="text-[10px] uppercase tracking-widest text-gray-400 hover:text-black transition-colors disabled:opacity-30">Previous</button>
+<div class="flex gap-4">
+<span class="text-sm border-b border-black">01</span>
+<span class="text-sm text-gray-400 cursor-pointer hover:text-black">02</span>
+<span class="text-sm text-gray-400 cursor-pointer hover:text-black">03</span>
+</div>
+<button class="text-[10px] uppercase tracking-widest hover:text-black transition-colors">Next</button>
+</div>
+</main>
+<!-- END: ListingsGrid -->
+<!-- BEGIN: MainFooter -->
+<footer class="bg-gray-50 border-t border-gray-200 py-16 px-4 md:px-12">
+<div class="max-w-7xl mx-auto flex flex-col items-center">
+<img alt="Steven Parks Logo" class="h-12 w-12 object-contain grayscale opacity-60 mb-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkrWgnfE6CvJ1FXXQtIY-Mxoe9SohAFapqyrA7mZX0oi90OrWUwEOj-IkzHxDiK8vfQhLlUiOiXcbmcTMyBHh1XOOeL_eAVyWXCUHJLmUUs9UEA9ZEWIddk7cfJa2fHVpeZWMLxXP_k-u401dzmGmjSI2fs5vw8n9ZNFBOlHZixmhw8AbtuBjNzc1k6dNFTqda1yZ1qvbWWbHzrWVziQIKYqKjZ2bZi4m7hsWaRoQ0LJyt6LA8s56ka1hwnUTDnQJRjl0Jpt0KUdo"/>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 w-full text-center md:text-left">
+<div>
+<h4 class="text-[10px] uppercase tracking-[0.4em] mb-4 text-gray-400">Contact</h4>
+<p class="text-sm font-light leading-relaxed">info@stevendparks.com<br/>+1 310 555 0123</p>
+</div>
+<div class="text-center">
+<h4 class="text-[10px] uppercase tracking-[0.4em] mb-4 text-gray-400">Office</h4>
+<p class="text-sm font-light leading-relaxed">9460 Wilshire Blvd<br/>Beverly Hills, CA 90212</p>
+</div>
+<div class="md:text-right">
+<h4 class="text-[10px] uppercase tracking-[0.4em] mb-4 text-gray-400">Follow</h4>
+<div class="flex justify-center md:justify-end gap-6 text-sm font-light">
+<a class="hover:text-gray-500" href="#">Instagram</a>
+<a class="hover:text-gray-500" href="#">LinkedIn</a>
+</div>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-gray-200 w-full text-center">
+<p class="text-[9px] uppercase tracking-widest text-gray-400">© 2023 Steven D. Parks Luxury Real Estate. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<!-- END: MainFooter -->
+</body></html>

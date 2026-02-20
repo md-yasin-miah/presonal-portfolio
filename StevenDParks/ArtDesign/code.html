@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Steven D. Park | Art &amp; Design Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#000000",
+                        "gallery-bg": "#ffffff",
+                        "accent-gray": "#e5e5e5"
+                    },
+                    fontFamily: {
+                        "serif": ["'Playfair Display'", "serif"]
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #ffffff;
+            color: #000000;
+            -webkit-font-smoothing: antialiased;
+        }
+        .letter-spacing-refined {
+            letter-spacing: 0.15em;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 2rem;
+        }
+        .nav-link {
+            position: relative;
+            padding-bottom: 2px;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            background-color: #000;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .btn-minimal {
+            border: 1px solid #000;
+            transition: all 0.4s ease;
+        }
+        .btn-minimal:hover {
+            background-color: #000;
+            color: #fff;
+        }
+        .img-container {
+            overflow: hidden;
+            background-color: #f9f9f9;
+        }
+        .img-container img {
+            transition: opacity 0.5s ease;
+        }
+        .img-container:hover img {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body class="selection:bg-black selection:text-white">
+<nav class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-black/5">
+<div class="max-w-7xl mx-auto px-8 h-24 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<span class="text-lg font-normal tracking-[0.2em] uppercase">Steven D. Park</span>
+<span class="text-black/30 font-light">|</span>
+<span class="text-lg font-normal tracking-[0.1em]">Art &amp; Design</span>
+</div>
+<div class="hidden md:flex items-center gap-12 text-[11px] uppercase tracking-[0.2em] font-normal">
+<a class="nav-link" href="#">Collaboration</a>
+<a class="nav-link" href="#">Philosophy</a>
+<a class="nav-link" href="#">Archive</a>
+<a class="nav-link" href="#">Contact</a>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined font-light">menu</span>
+</div>
+</div>
+</nav>
+<header class="relative h-[90vh] flex items-center justify-center pt-24 overflow-hidden px-8">
+<div class="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 items-center gap-16">
+<div class="z-20 order-2 lg:order-1">
+<h2 class="text-black/40 text-[10px] font-normal tracking-[0.4em] uppercase mb-6 italic">A Curated Partnership</h2>
+<h1 class="text-5xl md:text-7xl font-normal mb-8 leading-[1.1] tracking-tight">
+                The intersection of <br/><span class="italic">form</span> and <span class="italic">narrative</span>.
+            </h1>
+<p class="text-base font-normal text-black/60 max-w-md leading-relaxed mb-10">
+                A study in spatial dialogue: the architecture of Steven D. Park meets the calligraphic intensity of RETNA.
+            </p>
+<div class="flex gap-8">
+<button class="btn-minimal px-10 py-4 text-[10px] uppercase tracking-[0.2em]">Explore Edition</button>
+</div>
+</div>
+<div class="relative h-[60vh] lg:h-[70vh] order-1 lg:order-2 img-container">
+<img alt="Luxury interior" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsQw3mnYW_Rp7b0f4pj5SSsgwV026IISP94yEE-xeOZizODj6Dktl68ZRw3dt-93XuG-Iia2ZmW3ewwg9rwlTTEum-VX0afbCUSmiCaVwiw3VuuxcCvXMFsBGbF6_ZeFt_sOzEQrG51dvJMseByDnA9yGkr5JYVWai2CCod7KMiskPPZYPKcEINcYFotSMMxTgBOLfKN7LyYVIo7kfd4QgppWAoiM3U38raLvqxxc1wTJdDVGz-BYW3B6nPFJ_43-U7maETBuTdIk"/>
+</div>
+</div>
+</header>
+<section class="py-40 px-8 bg-white">
+<div class="max-w-5xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-20 items-start">
+<div class="lg:col-span-5 space-y-10">
+<div class="w-16 h-[1px] bg-black/20"></div>
+<h3 class="text-4xl font-normal leading-tight italic">The Philosophy of Curated Space</h3>
+<p class="text-black/60 text-base leading-relaxed font-normal">
+                    Art is not an ornament; it is the fundamental soul of the structure. We approach every collaboration as a living catalog—where the wall is no longer a boundary, but a canvas for historical resonance.
+                </p>
+<div class="pt-4">
+<button class="flex items-center gap-4 group">
+<span class="text-[10px] uppercase tracking-[0.3em] border-b border-black pb-1">Read the Essay</span>
+<span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">north_east</span>
+</button>
+</div>
+</div>
+<div class="lg:col-span-7">
+<div class="img-container">
+<img alt="Abstract calligraphy" class="w-full grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAeFd49zQfIqd0TGz64r5T3Q4cZ0ZzxkFYYxRr2SMO6MTEnIBYhVzQuCMMy1nx160YlhDRS0BzVRxRUKavsrjUag-2ezkITdn749kXLuw6BBLjvqjCneDbh6QLedOuaqlHrV_6KJSLvk9ma8DicdcIqwmX3JkB90Lbte73iHwECz6uW5DI4QAs7FE2qoOpOy-r-Z141KEGRYM_xYSrMIYqYwT3HZWJG8EtZPiL0VVY1-AM_NZ5XmFsol_qCbEMB4Ou-Nk69zl80s4"/>
+</div>
+<p class="mt-6 text-[10px] uppercase tracking-[0.2em] text-black/40 text-right italic">Plate 01: The Textural Interface</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-white">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-24 flex flex-col items-center text-center">
+<span class="text-[10px] uppercase tracking-[0.4em] text-black/40 mb-4 italic">The Collection</span>
+<h2 class="text-3xl font-normal tracking-wide uppercase">Integrated Masterworks</h2>
+</div>
+<div class="gallery-grid">
+<div class="col-span-12 lg:col-span-7 mb-12">
+<div class="img-container h-[600px] mb-6">
+<img alt="Mural" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2c0Q6xoTXRfwqNmBCft0MLxsSPkhYK_--y6dRZpe_0bMkE6PYe4LQ49jjOyBKl3mTNUW3Z5Esba9w2fA4lcmq6k00yljW7YWxtQIWdq3lnFvYxbgMGBi6QOopispQK5DmwAop0EvDzFgjkvZ3KEyOM9gqx8Psy3cCo_zkjLPCRDMgU6MW8KLAfOYh1TddJrVBc4QHD9ivf7BV1e9i_0FrKM-YtrQXPn5eHgSJRcuCVVqt8hcWkMKOcjJFVO3HZTIbhXfXSaRoH0k"/>
+</div>
+<div class="flex justify-between items-baseline">
+<h4 class="text-xl font-normal italic">The West Hollywood Penthouse</h4>
+<span class="text-[10px] tracking-[0.2em] text-black/40 uppercase">Project No. 001</span>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-5 lg:mt-32 mb-12">
+<div class="img-container h-[500px] mb-6">
+<img alt="Art detail" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-TVAFbYT-R8JnSPBVViL3b1uncVttOiJSlQzAxsagL0A99w8uV31gD5skJxd5h68zLlZQ6WLfokMRNECS9bJ5uK_5WJU1suHdqA0muuiB69P3eKwm5eowle1W-bjYY1IXjfdi_oswEeqPHNOdx6Dk-E1m3qrSwRokBZ1ZnJU2uGbsrTfdFnTcOiUmlDcfXRLYV4b_OFCV3ojREVFy8GnQmyLqK03wy6E8Piiy3BWkFMO5Fcu0c63L3J7MzvH2agDx1o70RZfNP5E"/>
+</div>
+<div class="flex justify-between items-baseline">
+<h4 class="text-xl font-normal italic">The Obsidian Foyer</h4>
+<span class="text-[10px] tracking-[0.2em] text-black/40 uppercase">Project No. 002</span>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-4 mb-12">
+<div class="img-container h-[450px] mb-6">
+<img alt="Exterior" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFxpMFWQy0cGML9S76QlnZMRH6aZ83DOetawLhDam550zwzKVjng8JQJDLUKQPF4DuCD01BxsEEdlnLxGN6RD2B7OQoKY1uqaRqbPRDEG9lIA6W-ZqzlL1emRDkJUceGpER3zJt_cW17ZoPOC3XYbscbk9tCG-eVJwgad-EBH-APeTkefn3cQwov1T7ZWVU4jdZ5AmkD-K0GxWaPwMCaI_kS-4s4kVSi3sc8fD5CIhP_1QJCLKHKE3TQa0wv0RcB1RHtJRqb-t6fg"/>
+</div>
+<div class="flex justify-between items-baseline">
+<h4 class="text-xl font-normal italic">Bel-Air Facade</h4>
+<span class="text-[10px] tracking-[0.2em] text-black/40 uppercase">Project No. 003</span>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-8 mb-12">
+<div class="img-container h-[450px] mb-6">
+<img alt="Gallery lighting" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJwhSjgXPJVZJVFcjuiEdmIgqFYQ9thk4ft4ds1Tn5JNlFQSY7pciCRLUWTvtcAagJew4ESXV2hAnjWOhbjEKEoQFRw4Pc_ckxRglbf6CefOSCsl0GVr3pKLzRPfHdjOh9xAbG7IiziezznzT7iGoR4R6i5ZZBJCzBo1eghjrJO1ovtC-rChgGmuYgnEBtaTx6y0v1mAIjlUUk3Zp-0hGyC1TI8faBbIZzK-bY0-4vYvsTd8kesLQ7xdgava8BVB2QnWVtfdZNcgk"/>
+</div>
+<div class="flex justify-between items-baseline">
+<h4 class="text-xl font-normal italic">The Library Collection</h4>
+<span class="text-[10px] tracking-[0.2em] text-black/40 uppercase">Project No. 004</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-40 bg-white border-y border-black/5">
+<div class="max-w-3xl mx-auto text-center px-8">
+<h2 class="text-3xl md:text-4xl font-normal leading-relaxed italic mb-12">
+            "Architecture is the vessel, but art is the breath that makes it alive. My scripts are stories written in the air."
+        </h2>
+<div class="flex items-center justify-center gap-6">
+<div class="w-8 h-[1px] bg-black/20"></div>
+<span class="text-[11px] font-normal tracking-[0.3em] uppercase">Artist Statement</span>
+<div class="w-8 h-[1px] bg-black/20"></div>
+</div>
+</div>
+</section>
+<section class="py-40 px-8 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-24">
+<div class="space-y-6">
+<span class="text-black/30 font-normal italic text-sm">01.</span>
+<h4 class="text-xs font-normal uppercase tracking-[0.3em] pb-4 border-b border-black/10">Analysis</h4>
+<p class="text-black/60 leading-relaxed text-sm font-normal">We study the natural light, volumetric flow, and textural soul of the space to anchor the intervention.</p>
+</div>
+<div class="space-y-6">
+<span class="text-black/30 font-normal italic text-sm">02.</span>
+<h4 class="text-xs font-normal uppercase tracking-[0.3em] pb-4 border-b border-black/10">Concept</h4>
+<p class="text-black/60 leading-relaxed text-sm font-normal">A bespoke visual language is developed, drawing from the location’s history and structural intent.</p>
+</div>
+<div class="space-y-6">
+<span class="text-black/30 font-normal italic text-sm">03.</span>
+<h4 class="text-xs font-normal uppercase tracking-[0.3em] pb-4 border-b border-black/10">Legacy</h4>
+<p class="text-black/60 leading-relaxed text-sm font-normal">Execution via permanent materials, ensuring the dialogue between art and architecture remains timeless.</p>
+</div>
+</div>
+</section>
+<section class="py-40 bg-white">
+<div class="max-w-7xl mx-auto px-8 flex flex-col items-center text-center">
+<h2 class="text-4xl md:text-5xl font-normal mb-8 tracking-tight">Acquisitions &amp; Commissions</h2>
+<p class="text-black/50 max-w-lg mb-16 text-base font-normal italic leading-relaxed">Inquire for private portfolio access or bespoke architectural collaborations.</p>
+<div class="flex flex-col sm:flex-row gap-8">
+<button class="px-12 py-5 bg-black text-white text-[10px] uppercase tracking-[0.3em] hover:bg-black/80 transition-colors">
+                Request Portfolio
+            </button>
+<button class="px-12 py-5 border border-black text-black text-[10px] uppercase tracking-[0.3em] hover:bg-black hover:text-white transition-all">
+                Private Inquiry
+            </button>
+</div>
+</div>
+</section>
+<footer class="py-24 bg-white border-t border-black/10">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-24">
+<div class="col-span-2">
+<div class="flex items-center gap-4 mb-8">
+<span class="text-lg font-normal tracking-[0.2em] uppercase">Steven D. Park</span>
+<span class="text-black/30">|</span>
+<span class="text-lg font-normal tracking-[0.1em]">Retna</span>
+</div>
+<p class="text-black/50 max-w-xs text-xs font-normal leading-relaxed italic">The convergence of high-end real estate and contemporary fine art. Los Angeles based.</p>
+</div>
+<div>
+<h5 class="text-[10px] font-normal uppercase tracking-[0.3em] mb-8 text-black/40">Studio</h5>
+<ul class="text-black/60 space-y-4 text-xs font-normal">
+<li>Los Angeles, CA</li>
+<li>inquire@stevendpark.com</li>
+<li>+1 (310) 555-0192</li>
+</ul>
+</div>
+<div>
+<h5 class="text-[10px] font-normal uppercase tracking-[0.3em] mb-8 text-black/40">Connect</h5>
+<ul class="text-black/60 space-y-4 text-xs font-normal">
+<li class="hover:text-black cursor-pointer underline underline-offset-4 decoration-black/10">Instagram</li>
+<li class="hover:text-black cursor-pointer underline underline-offset-4 decoration-black/10">Artsy</li>
+<li class="hover:text-black cursor-pointer underline underline-offset-4 decoration-black/10">LinkedIn</li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-black/5 text-[9px] uppercase tracking-[0.3em] text-black/30">
+<p>© 2024 Steven D. Park Studio.</p>
+<div class="flex gap-12 mt-6 md:mt-0">
+<a class="hover:text-black transition-colors" href="#">Privacy</a>
+<a class="hover:text-black transition-colors" href="#">Terms</a>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>

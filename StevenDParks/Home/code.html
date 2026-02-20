@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Steven D. Park | Real Estate Advisory</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            white: "#ffffff",
+                            black: "#111111",
+                            mahogany: "#4A2C2A",
+                            mahoganyLight: "#5D3A37",
+                            gray: "#fcfcfc",
+                            muted: "#717171"
+                        }
+                    },
+                    fontFamily: {
+                        display: ["Playfair Display", "serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-brand-white text-brand-black antialiased selection:bg-brand-mahogany selection:text-white overflow-x-hidden;
+            }
+        }
+        .editorial-spacing {
+            letter-spacing: -0.015em;
+        }
+        .nav-link {
+            @apply text-[11px] uppercase tracking-[0.25em] font-medium text-brand-muted hover:text-brand-mahogany transition-colors;
+        }
+        .section-header {
+            @apply text-4xl md:text-5xl font-display font-normal mb-8 leading-tight text-brand-black;
+        }
+        .accent-heading {
+            @apply text-brand-mahogany font-medium uppercase tracking-[0.4em] text-[10px] mb-6 block;
+        }
+    </style>
+</head>
+<body class="font-sans">
+<nav class="fixed top-0 z-[100] w-full bg-white/90 backdrop-blur-md border-b border-gray-50">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="flex justify-between items-center h-24">
+<div class="flex items-center gap-4">
+<img alt="Steven Parks Logo" class="h-6 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcBTkY2haMS-5YfA_bPutkacyrrFQP92Q-kZKgl6jlBn6aT40EydQAFyzd_J8ljwR2jlLRNLc_3lTt8oXqaCczDzhC1n2HhnuXNKzd5Gx7UboHWEbF3sFlfqphSvnU6qlp7vvlTlVZsqCrryGQVihDtfXd-rqyAWJf4y7rehVVfUn5WlsWX6eczV7jFl_9UhpRVSmycPvA2UaLbXGb8Pp2MxT7KcOLis_IuNTtsPPKDo9K7EdWyCwNHtU3QahrFkQC1y4Vx7qbibE"/>
+<span class="font-sans font-semibold text-[11px] tracking-[0.35em] uppercase text-brand-black">Steven D. Park</span>
+</div>
+<div class="hidden lg:flex items-center space-x-12">
+<a class="nav-link" href="#strategies">Strategies</a>
+<a class="nav-link" href="#mentorship">Mentorship</a>
+<a class="nav-link" href="#success">Success</a>
+<a class="border border-brand-mahogany text-brand-mahogany px-8 py-3 text-[10px] font-semibold uppercase tracking-[0.2em] hover:bg-brand-mahogany hover:text-white transition-all duration-300" href="#">Contact</a>
+</div>
+</div>
+</div>
+</nav>
+<header class="relative min-h-screen flex items-center pt-24">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 w-full grid lg:grid-cols-12 gap-16 items-center">
+<div class="lg:col-span-6 py-20 z-10">
+<div class="flex items-center gap-4 mb-8">
+<div class="h-[1px] w-12 bg-brand-mahogany"></div>
+<span class="text-brand-mahogany text-[10px] font-semibold uppercase tracking-[0.4em]">Real Estate Advisor</span>
+</div>
+<h1 class="font-display text-5xl md:text-7xl font-normal leading-tight mb-8 editorial-spacing">
+                    Build Your <br/><span class="italic text-brand-mahogany">Legacy Empire.</span>
+</h1>
+<p class="text-lg text-brand-muted mb-12 max-w-md leading-relaxed font-light">
+                    Implementing institutional-grade frameworks for high-net-worth real estate portfolios. Professional guidance for sophisticated investors who demand precision.
+                </p>
+<div class="flex flex-col sm:flex-row gap-6">
+<button class="bg-brand-mahogany text-white px-12 py-5 text-[11px] font-semibold uppercase tracking-[0.2em] hover:bg-brand-mahoganyLight transition-all flex items-center justify-center gap-3 shadow-lg shadow-brand-mahogany/10">
+                        Inquire Now
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<button class="text-brand-black px-12 py-5 text-[11px] font-semibold uppercase tracking-[0.2em] border border-gray-200 hover:border-brand-mahogany hover:text-brand-mahogany transition-all">
+                        The Strategy
+                    </button>
+</div>
+</div>
+<div class="lg:col-span-6 relative flex justify-end">
+<div class="relative w-full aspect-[4/5] max-w-md lg:max-w-full">
+<img alt="Steven D. Park Portrait" class="w-full h-full object-cover shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCya71klgUfAjW_eksvfI65U-NYHVe9y65fDjoejfIJKeKwofpDyKBV0cWvEiv7q-_-TyHApuxPp42MhmGsxAEO8ox0_wiPtFVVnLFGrhtLS9t_u8EPP5ZE7MvYn6h9LzMZgN_czu8dnWxiqa4ZR-5cw_KZgYpqm0VOU1S7pf9eZwrv4cumaPFGNSepaU7K3jwgh47CE26BZFOU76CJ2Z8i1Pnki6hcLq08C_7Dj7ulpIvcNiM5FRL-BG6PexGMWqOuqmzl9VHyMmo"/>
+<div class="absolute -z-10 -bottom-8 -left-8 w-full h-full border-2 border-brand-mahogany/5"></div>
+<div class="absolute -bottom-4 -right-4 w-24 h-24 bg-brand-mahogany/5 backdrop-blur-sm -z-10"></div>
+</div>
+</div>
+</div>
+</header>
+<section class="py-32 bg-brand-white border-y border-gray-100" id="strategies">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="flex flex-col lg:flex-row justify-between items-end mb-24 gap-12">
+<div class="max-w-2xl">
+<span class="accent-heading">Sophisticated Portfolio</span>
+<h3 class="section-header">Investment <span class="italic text-brand-mahogany">Strategies</span></h3>
+<p class="text-lg text-brand-muted max-w-lg font-light leading-relaxed">We utilize proprietary data and institutional risk management to engineer sustainable growth and capital preservation.</p>
+</div>
+</div>
+<div class="grid lg:grid-cols-3 gap-16">
+<div class="group">
+<div class="text-[11px] font-bold text-brand-mahogany mb-8 tracking-[0.3em]">01</div>
+<h4 class="text-xl font-display mb-6 border-l-2 border-brand-mahogany/20 pl-6 group-hover:border-brand-mahogany transition-colors">Multifamily Syndication</h4>
+<p class="text-brand-muted font-light leading-relaxed text-sm pl-6">Scaling into large-scale apartment complexes for consistent cash flow and significant tax advantages.</p>
+</div>
+<div class="group">
+<div class="text-[11px] font-bold text-brand-mahogany mb-8 tracking-[0.3em]">02</div>
+<h4 class="text-xl font-display mb-6 border-l-2 border-brand-mahogany/20 pl-6 group-hover:border-brand-mahogany transition-colors">Strategic Acquisitions</h4>
+<p class="text-brand-muted font-light leading-relaxed text-sm pl-6">Bypassing traditional brokerage channels to secure off-market equity and clinical negotiation outcomes.</p>
+</div>
+<div class="group">
+<div class="text-[11px] font-bold text-brand-mahogany mb-8 tracking-[0.3em]">03</div>
+<h4 class="text-xl font-display mb-6 border-l-2 border-brand-mahogany/20 pl-6 group-hover:border-brand-mahogany transition-colors">Capital Allocation</h4>
+<p class="text-brand-muted font-light leading-relaxed text-sm pl-6">Sophisticated blueprints for private equity raising and structural portfolio optimization.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 bg-brand-gray" id="mentorship">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid lg:grid-cols-2 gap-24 items-center">
+<div class="relative order-2 lg:order-1">
+<div class="aspect-square bg-white shadow-xl overflow-hidden p-6">
+<img alt="Mentorship Focus" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCya71klgUfAjW_eksvfI65U-NYHVe9y65fDjoejfIJKeKwofpDyKBV0cWvEiv7q-_-TyHApuxPp42MhmGsxAEO8ox0_wiPtFVVnLFGrhtLS9t_u8EPP5ZE7MvYn6h9LzMZgN_czu8dnWxiqa4ZR-5cw_KZgYpqm0VOU1S7pf9eZwrv4cumaPFGNSepaU7K3jwgh47CE26BZFOU76CJ2Z8i1Pnki6hcLq08C_7Dj7ulpIvcNiM5FRL-BG6PexGMWqOuqmzl9VHyMmo"/>
+</div>
+</div>
+<div class="order-1 lg:order-2">
+<span class="accent-heading">Private Advisory</span>
+<h3 class="section-header">The <span class="italic text-brand-mahogany">Institutional</span> Circle</h3>
+<div class="space-y-6 text-brand-muted font-light leading-relaxed mb-12">
+<p>My mentorship is a refined execution plan tested across various market cycles. It is designed specifically for operators ready to scale into 9-figure portfolios.</p>
+<p>Experience high-level coaching tailored for the modern real estate executive. We focus on clinical precision and data-driven results that move the needle.</p>
+</div>
+<a class="inline-block bg-brand-mahogany text-white px-14 py-5 text-[10px] font-semibold uppercase tracking-[0.3em] hover:bg-brand-mahoganyLight transition-all shadow-lg shadow-brand-mahogany/20" href="#">Apply for Advisory</a>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 bg-brand-white" id="success">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 text-center">
+<span class="accent-heading mb-16">Performance Metrics</span>
+<div class="grid md:grid-cols-4 gap-12">
+<div class="p-8 border-b md:border-b-0 md:border-r border-gray-100 last:border-0">
+<div class="text-4xl font-display mb-4 text-brand-mahogany">$500M+</div>
+<div class="text-[10px] font-semibold uppercase tracking-[0.3em] text-brand-muted">Transaction Volume</div>
+</div>
+<div class="p-8 border-b md:border-b-0 md:border-r border-gray-100 last:border-0">
+<div class="text-4xl font-display mb-4 text-brand-mahogany">2.4K+</div>
+<div class="text-[10px] font-semibold uppercase tracking-[0.3em] text-brand-muted">Portfolio Partners</div>
+</div>
+<div class="p-8 border-b md:border-b-0 md:border-r border-gray-100 last:border-0">
+<div class="text-4xl font-display mb-4 text-brand-mahogany">15+</div>
+<div class="text-[10px] font-semibold uppercase tracking-[0.3em] text-brand-muted">Market Cycles</div>
+</div>
+<div class="p-8 last:border-0">
+<div class="text-4xl font-display mb-4 text-brand-mahogany">450+</div>
+<div class="text-[10px] font-semibold uppercase tracking-[0.3em] text-brand-muted">Assets Managed</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-48 bg-brand-white border-t border-gray-50">
+<div class="max-w-4xl mx-auto px-6 text-center">
+<h2 class="text-5xl md:text-7xl font-display font-normal mb-12 editorial-spacing">
+                Refine Your <span class="italic text-brand-mahogany">Legacy.</span>
+</h2>
+<p class="text-brand-muted font-light mb-16 max-w-xl mx-auto text-lg leading-relaxed">
+                Elevate your real estate trajectory with institutional-grade advisory and clinical market execution.
+            </p>
+<div class="flex flex-col md:flex-row justify-center items-center gap-8">
+<a class="w-full md:w-auto bg-brand-mahogany text-white px-14 py-5 text-[11px] font-semibold uppercase tracking-[0.3em] hover:bg-brand-mahoganyLight transition-all shadow-xl shadow-brand-mahogany/10" href="#">Consultation</a>
+<a class="w-full md:w-auto border border-brand-mahogany text-brand-mahogany px-14 py-5 text-[11px] font-semibold uppercase tracking-[0.3em] hover:bg-brand-mahogany hover:text-white transition-all" href="#">Private Training</a>
+</div>
+</div>
+</section>
+<footer class="bg-brand-white py-20 border-t border-gray-100">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid lg:grid-cols-3 items-center gap-16">
+<div class="flex flex-col items-center lg:items-start">
+<img alt="Logo" class="h-5 opacity-80 mb-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcBTkY2haMS-5YfA_bPutkacyrrFQP92Q-kZKgl6jlBn6aT40EydQAFyzd_J8ljwR2jlLRNLc_3lTt8oXqaCczDzhC1n2HhnuXNKzd5Gx7UboHWEbF3sFlfqphSvnU6qlp7vvlTlVZsqCrryGQVihDtfXd-rqyAWJf4y7rehVVfUn5WlsWX6eczV7jFl_9UhpRVSmycPvA2UaLbXGb8Pp2MxT7KcOLis_IuNTtsPPKDo9K7EdWyCwNHtU3QahrFkQC1y4Vx7qbibE"/>
+<p class="text-[10px] text-brand-muted font-medium uppercase tracking-[0.4em]">© 2024 Steven D. Park Enterprises</p>
+</div>
+<div class="flex justify-center gap-12">
+<a class="text-[10px] font-semibold uppercase tracking-[0.3em] text-brand-muted hover:text-brand-mahogany transition-colors" href="#">LinkedIn</a>
+<a class="text-[10px] font-semibold uppercase tracking-[0.3em] text-brand-muted hover:text-brand-mahogany transition-colors" href="#">Instagram</a>
+<a class="text-[10px] font-semibold uppercase tracking-[0.3em] text-brand-muted hover:text-brand-mahogany transition-colors" href="#">X / Twitter</a>
+</div>
+<div class="text-[10px] text-brand-muted font-medium uppercase tracking-[0.2em] text-center lg:text-right leading-relaxed">
+                    Confidential Real Estate Advisory.<br/>
+<span class="text-brand-mahogany/60">Institutional Excellence Redefined.</span>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>

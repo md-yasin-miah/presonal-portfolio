@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand palette from Home/code.html */
+  --color-brand-white: #ffffff;
+  --color-brand-black: #111111;
+  --color-brand-mahogany: #4A2C2A;
+  --color-brand-mahogany-light: #5D3A37;
+  --color-brand-gray: #fcfcfc;
+  --color-brand-muted: #717171;
+  /* Font families (from next/font in root layout) */
+  --font-display: var(--font-playfair), "Playfair Display", ui-serif, Georgia, serif;
+  --font-sans: var(--font-inter), "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --background: var(--color-brand-white);
+  --foreground: var(--color-brand-black);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-brand-mahogany);
+  color: white;
+}
+
+/* Utility classes used across pages */
+.editorial-spacing {
+  letter-spacing: -0.015em;
+}
+
+.nav-link {
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--color-brand-muted);
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: var(--color-brand-mahogany);
+}
+
+.section-header {
+  font-size: 2.25rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+  color: var(--color-brand-black);
+  font-family: var(--font-display);
+}
+
+@media (min-width: 768px) {
+  .section-header {
+    font-size: 3rem;
+  }
+}
+
+.accent-heading {
+  color: var(--color-brand-mahogany);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  font-size: 10px;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+/* Press logos - grayscale, hover to full color */
+.press-logo {
+  filter: grayscale(1);
+  opacity: 0.4;
+  transition: filter 0.5s ease, opacity 0.5s ease;
+}
+.press-logo:hover {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+/* Material Symbols Outlined - ensure icon font applies when loaded */
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: inherit;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+}

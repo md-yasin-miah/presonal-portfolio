@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Property Detail | Steven D. Parks Real Estate</title>
+<!-- Tailwind CSS CDN with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Playfair Display -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+          },
+        },
+      },
+    }
+  </script>
+<style data-purpose="typography">
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #ffffff;
+      color: #1a1a1a;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, h4 {
+      font-weight: 400;
+      letter-spacing: -0.01em;
+    }
+    .label-text {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #737373;
+    }
+  </style>
+<style data-purpose="custom-layouts">.hero-gradient {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%)
+    }
+.sticky-sidebar {
+    top: 2rem
+    }
+/* Simple map placeholder styling */
+#map-placeholder {
+    background-color: #f5f5f5;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCzWsVbbmNJPrZ6TQMrurCvm1_q418yAngXrkICMlnmxTlJkjLKEbWbGK63MVZscOlkuq3HJz-scL6Upb-zPt3WIQiA2xqNkxDHgWOB_UI0wEPl4L0a8nQqBJlPWJK9nvzEZccOidiJ3_kMJeGq2Qk06JocLCPmmYOguvsXXGZakZ3YTOuL1wVI3FHBfVAmXjr9Lf5WPkYFpPaR8MB1b28ddAOXJZYLUDSV11X9LGAHMHUhT1lQCEhXyfpa4nVc2XB86Up95vzXXvo);
+    background-size: cover;
+    background-position: center
+    }</style>
+</head>
+<body class="bg-white">
+<!-- BEGIN: Navigation -->
+<nav class="border-b border-neutral-100 py-6 px-8 flex justify-between items-center" data-purpose="main-navigation">
+<div class="flex items-center">
+<img alt="Steven Parks Logo" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCopf8kkQEMEnJSq9vVoVeJB_GIoA05_xadbaFyNjQDwsR5-J_mjOXc-2bAX2Cfyxxp8l_0-As1H5lEo31qLDlDFug3QPlUcJAjELbEKlM3-nC1J4gEtwfDzd-w6zBHv3YrhpmlJWmHttnaymucXnv0XK3gnpSCFQzKXqa0sPhWM8R66mX-AXLkEaOxr8bZc_Ou4COBZP8TsEOUkjIeLjygJacoqZ7wUfqxWh1JpIYs1-2g1wOLDXFD0jv7WiABnvZOTjhsOJRdIhc"/>
+</div>
+<div class="hidden md:flex space-x-12 text-sm uppercase tracking-widest font-light">
+<a class="hover:opacity-60 transition-opacity" href="#">Properties</a>
+<a class="hover:opacity-60 transition-opacity" href="#">About</a>
+<a class="hover:opacity-60 transition-opacity" href="#">Contact</a>
+</div>
+<div class="md:hidden">
+<!-- Mobile menu icon -->
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 8h16M4 16h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path>
+</svg>
+</div>
+</nav>
+<!-- END: Navigation -->
+<main>
+<!-- BEGIN: Hero Section -->
+<section class="relative h-[70vh] w-full overflow-hidden" data-purpose="property-hero">
+<img alt="Property Hero Image" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwW8Im2qjxqq7ysw8KeRGp_F8vhndu1ugPjkWLshAEXlEYj_AHutdQlwswL2YSZrmFA1GeNS7Honv48AvipoWOALpBjV2wpu8NdXrqyWz8zuUIytfKiT9dueAeRxltk6InNW8MGQuGCvPb7zq68YptMUmUilE1gSNas8dPIgvku_Ss5hpo_DVCsoMNbLEseLqpSFJgQGMnvCY1mjHOAODLoAoQQHzaD2PI7y_pFkLTwgFQaa5xE7le9q9dgASYE_j-mxLVPozz5kg"/>
+<div class="absolute inset-0 hero-gradient flex flex-col justify-end p-8 md:p-16 text-white">
+<span class="label-text text-white/80 mb-2">Bel Air, California</span>
+<h1 class="text-4xl md:text-6xl max-w-4xl">The Sycamore Residence</h1>
+</div>
+</section>
+<!-- END: Hero Section -->
+<!-- BEGIN: Property Stats Grid -->
+<section class="max-w-7xl mx-auto px-8 py-12 border-b border-neutral-100" data-purpose="property-quick-stats">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="flex flex-col">
+<span class="label-text">Price</span>
+<span class="text-2xl mt-1">$8,450,000</span>
+</div>
+<div class="flex flex-col">
+<span class="label-text">Bedrooms</span>
+<span class="text-2xl mt-1">5</span>
+</div>
+<div class="flex flex-col">
+<span class="label-text">Bathrooms</span>
+<span class="text-2xl mt-1">6.5</span>
+</div>
+<div class="flex flex-col">
+<span class="label-text">Square Footage</span>
+<span class="text-2xl mt-1">6,200 <small class="text-sm">sqft</small></span>
+</div>
+</div>
+</section>
+<!-- END: Property Stats Grid -->
+<!-- BEGIN: Content & Form Section -->
+<section class="max-w-7xl mx-auto px-8 py-20" data-purpose="property-content-layout">
+<div class="flex flex-col lg:flex-row gap-16">
+<!-- Left Column: Description -->
+<article class="lg:w-2/3 space-y-12">
+<div>
+<h2 class="text-3xl mb-8">Architectural Masterpiece in the Hills</h2>
+<div class="text-lg leading-relaxed text-neutral-700 space-y-6">
+<p>
+                Nestled within the private gates of Bel Air, The Sycamore Residence represents the pinnacle of modern architectural design. Conceived by renowned firm Harrison &amp; Woods, this property seamlessly integrates indoor and outdoor living through expansive floor-to-ceiling glass walls that frame panoramic views of the canyon and city lights.
+              </p>
+<p>
+                The main level features an open-concept floor plan with European white oak flooring, a chef's kitchen outfitted with Sub-Zero and Wolf appliances, and a formal dining area that opens onto a wrap-around terrace. The primary suite serves as a private sanctuary, complete with a dual-sided fireplace, private balcony, and a spa-inspired bathroom finished in Italian Carrara marble.
+              </p>
+<p>
+                Additional amenities include a state-of-the-art home cinema, a temperature-controlled wine cellar, and a zero-edge infinity pool that appears to spill into the horizon. This is more than a home; it is an experience of unparalleled luxury and tranquility.
+              </p>
+</div>
+</div>
+<!-- Key Features -->
+<div class="pt-8 border-t border-neutral-100">
+<h3 class="label-text mb-6">Property Amenities</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-neutral-600">
+<div class="flex items-center">• Infinity Edge Pool &amp; Spa</div>
+<div class="flex items-center">• 4-Car Gallery Garage</div>
+<div class="flex items-center">• Smart Home Automation</div>
+<div class="flex items-center">• Professional Gym &amp; Sauna</div>
+<div class="flex items-center">• Outdoor Kitchen &amp; Firepit</div>
+<div class="flex items-center">• Gated Private Driveway</div>
+</div>
+</div>
+</article>
+<!-- Right Column: Contact Form Sticky -->
+<aside class="lg:w-1/3">
+<div class="sticky sticky-sidebar bg-neutral-50 p-8 border border-neutral-100 rounded-sm">
+<h3 class="text-xl mb-6">Inquire About This Property</h3>
+<!-- Agent Info -->
+<div class="flex items-center space-x-4 mb-8">
+<div class="w-16 h-16 rounded-full overflow-hidden bg-neutral-200">
+<img alt="Steven D. Parks" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBAdChiWHhRWafxjkRLYi9NhaOQCdKpubb0YTBPtwAljlqJnqgIZ9Fr9i85DVDVfioeZ57gRJkd4Y_9kuYevVQaAHzCmFJdQGu_SOTejdLJJzV3iEBgECdPp1eTv1_T_kYpuN1NhlA4kziHJ2mV9KH2ifFrVmeRGcvkn5ciFgOfevuhh1h0rmUblNvciHK9FHTVuKopIY9ER2VAYb6DS9NAvbYpjz2jWcJTt6bTCLt17yEFZPUuKslt3odkgPnQoBuVLlg7NyPyTg"/>
+</div>
+<div>
+<p class="font-medium">Steven D. Parks</p>
+<p class="label-text lowercase italic">Principal Broker</p>
+</div>
+</div>
+<form action="#" class="space-y-4">
+<div>
+<label class="label-text mb-1 block" for="name">Full Name</label>
+<input class="w-full border-neutral-200 focus:ring-black focus:border-black p-3 text-sm rounded-none" id="name" type="text"/>
+</div>
+<div>
+<label class="label-text mb-1 block" for="email">Email Address</label>
+<input class="w-full border-neutral-200 focus:ring-black focus:border-black p-3 text-sm rounded-none" id="email" type="email"/>
+</div>
+<div>
+<label class="label-text mb-1 block" for="message">Message</label>
+<textarea class="w-full border-neutral-200 focus:ring-black focus:border-black p-3 text-sm rounded-none" id="message" placeholder="I am interested in scheduling a private viewing..." rows="4"></textarea>
+</div>
+<button class="w-full bg-black text-white py-4 text-xs uppercase tracking-widest hover:bg-neutral-800 transition-colors duration-300" type="submit">
+                Send Inquiry
+              </button>
+</form>
+</div>
+</aside>
+</div>
+</section>
+<!-- END: Content & Form Section -->
+<!-- BEGIN: Map Integration -->
+<section class="w-full h-[500px] mb-20" data-purpose="location-map">
+<div class="w-full h-full relative" id="map-placeholder">
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-white px-6 py-4 shadow-xl border border-neutral-100 flex items-center space-x-3">
+<div class="w-3 h-3 bg-red-600 rounded-full animate-pulse"></div>
+<span class="label-text text-black">842 Sycamore Ln, Bel Air, CA</span>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Map Integration -->
+</main>
+<!-- BEGIN: Footer -->
+<footer class="bg-black text-white py-20 px-8" data-purpose="main-footer">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center border-b border-neutral-800 pb-12">
+<div class="mb-10 md:mb-0">
+<img alt="Steven Parks Logo" class="h-16 w-auto brightness-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHcHrQ4qWKl1mY2i8zs4JOgj7VmJhvyHcsA9VWzgKjqwoB6bqRUoI5q2ctk_KYSFStc_eiNP-sTdSY7G1nsfEL2p4HJlGplMqzh7kTEvH-_xNr7okx9EWsRV3nVzLFjJgd9qYZFqToyrBgSqB8NyhVL9h9EFiIoi6J1nfkadMDXu8-b6iDszFUpfB6UhfId3dYQvP0KIzNRGg2kyHqaGAcq37iqlWetylC76EOka8LvXW_5lemLGZSuqV7qbTmhbLjTjzt0GCoq2g"/>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12 text-sm uppercase tracking-widest text-neutral-400">
+<div class="flex flex-col space-y-4">
+<a class="hover:text-white" href="#">Listings</a>
+<a class="hover:text-white" href="#">Sold</a>
+</div>
+<div class="flex flex-col space-y-4">
+<a class="hover:text-white" href="#">Biography</a>
+<a class="hover:text-white" href="#">Press</a>
+</div>
+<div class="flex flex-col space-y-4">
+<a class="hover:text-white" href="#">Contact</a>
+<a class="hover:text-white" href="#">Legal</a>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto pt-12 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-widest text-neutral-600">
+<p>© 2024 Steven D. Parks Real Estate. All rights reserved.</p>
+<p class="mt-4 md:mt-0">Designed with sophistication in Los Angeles</p>
+</div>
+</footer>
+<!-- END: Footer -->
+</body></html>

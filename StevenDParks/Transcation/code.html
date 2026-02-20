@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Steven D. Park | Transactions &amp; Listings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#000000",
+                        "accent": "#666666",
+                        "border-subtle": "#e5e5e5",
+                        "background": "#ffffff"
+                    },
+                    fontFamily: {
+                        "sans": ["Inter", "sans-serif"],
+                        "serif": ["'Playfair Display'", "serif"]
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body { 
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+            font-size: 18px;
+        }
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #e5e5e5; }
+        .editorial-shadow {
+            box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.05);
+        }
+        h2, .font-serif-luxury {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body class="antialiased text-black">
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
+<div class="max-w-7xl mx-auto px-8 py-6 flex justify-between items-center">
+<div class="flex items-center gap-4">
+<div class="w-8 h-8 border border-black flex items-center justify-center">
+<span class="text-black font-light text-sm tracking-tighter">SP</span>
+</div>
+<div>
+<h1 class="text-sm font-medium tracking-[0.2em] uppercase">Steven D. Park</h1>
+<p class="text-[9px] tracking-[0.3em] text-accent uppercase mt-0.5">Luxury Real Estate Specialist</p>
+</div>
+</div>
+<nav class="hidden md:flex items-center gap-10 text-[11px] uppercase tracking-widest font-medium">
+<a class="hover:text-accent transition-colors" href="#">Portfolio</a>
+<a class="text-black border-b border-black pb-0.5" href="#">Transactions</a>
+<a class="hover:text-accent transition-colors" href="#">Market Reports</a>
+<a class="ml-4 px-6 py-2.5 border border-black hover:bg-black hover:text-white transition-all duration-300" href="#">Contact</a>
+</nav>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-8 py-16">
+<section class="mb-24">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-12 mb-16">
+<div class="max-w-2xl">
+<nav class="flex items-center gap-2 text-[10px] text-accent uppercase tracking-[0.2em] mb-6">
+<span>Home</span>
+<span class="material-symbols-outlined !text-[10px]">chevron_right</span>
+<span class="text-black">Portfolio &amp; Transactions</span>
+</nav>
+<h2 class="text-4xl md:text-5xl font-normal tracking-tight leading-[1.1] text-black">
+                        Proven Track Record <br/>
+<span class="text-accent italic text-3xl md:text-4xl mt-2 block">Performance Defined.</span>
+</h2>
+</div>
+<div class="grid grid-cols-2 lg:grid-cols-3 gap-12 border-l border-gray-100 pl-12">
+<div>
+<p class="text-[10px] uppercase tracking-[0.2em] text-accent mb-2">Volume Sold</p>
+<p class="text-2xl font-serif-luxury font-normal">$485M+</p>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-[0.2em] text-accent mb-2">Active</p>
+<p class="text-2xl font-serif-luxury font-normal">12</p>
+</div>
+<div class="hidden lg:block">
+<p class="text-[10px] uppercase tracking-[0.2em] text-accent mb-2">Avg DOM</p>
+<p class="text-2xl font-serif-luxury font-normal">18</p>
+</div>
+</div>
+</div>
+<div class="mb-24">
+<div class="flex items-center justify-between mb-8 pb-4 border-b border-gray-100">
+<h3 class="text-xs font-medium uppercase tracking-[0.2em] flex items-center gap-3">
+<span class="material-symbols-outlined text-accent">receipt_long</span>
+                        Past Transactions
+                    </h3>
+<div class="flex gap-6">
+<button class="text-[10px] tracking-widest text-accent hover:text-black transition-colors">EXPORT DATA</button>
+<button class="text-[10px] tracking-widest font-semibold border-b border-black">ALL YEARS</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="text-[10px] font-medium uppercase tracking-widest text-accent border-b border-gray-100">
+<th class="pb-6 font-medium">Property Address</th>
+<th class="pb-6 font-medium">Sale Price</th>
+<th class="pb-6 font-medium">Date Sold</th>
+<th class="pb-6 font-medium">Status</th>
+<th class="pb-6 font-medium text-right">Reference</th>
+</tr>
+</thead>
+<tbody class="text-sm">
+<tr class="border-b border-gray-50 group transition-colors">
+<td class="py-6">
+<div class="font-serif-luxury text-base text-black">821 Bel Air Road</div>
+<div class="text-[11px] text-accent mt-1">Los Angeles, CA 90077</div>
+</td>
+<td class="py-6 font-serif-luxury text-black">$24,500,000</td>
+<td class="py-6 text-accent">Oct 14, 2023</td>
+<td class="py-6"><span class="text-[9px] tracking-widest uppercase border border-gray-200 px-2 py-0.5 rounded-full text-accent">Closed</span></td>
+<td class="py-6 text-right text-[10px] text-accent font-light font-sans">MLS #23-4412</td>
+</tr>
+<tr class="border-b border-gray-50 group">
+<td class="py-6">
+<div class="font-serif-luxury text-base text-black">1502 Sunset Plaza Dr</div>
+<div class="text-[11px] text-accent mt-1">West Hollywood, CA 90069</div>
+</td>
+<td class="py-6 font-serif-luxury text-black">$12,850,000</td>
+<td class="py-6 text-accent">Sep 28, 2023</td>
+<td class="py-6"><span class="text-[9px] tracking-widest uppercase border border-gray-200 px-2 py-0.5 rounded-full text-accent">Closed</span></td>
+<td class="py-6 text-right text-[10px] text-accent font-light font-sans">MLS #23-3982</td>
+</tr>
+<tr class="border-b border-gray-50 group">
+<td class="py-6">
+<div class="font-serif-luxury text-base text-black">227 N Tigertail Rd</div>
+<div class="text-[11px] text-accent mt-1">Brentwood, CA 90049</div>
+</td>
+<td class="py-6 font-serif-luxury text-black">$9,200,000</td>
+<td class="py-6 text-accent">Aug 12, 2023</td>
+<td class="py-6"><span class="text-[9px] tracking-widest uppercase border border-gray-200 px-2 py-0.5 rounded-full text-accent">Closed</span></td>
+<td class="py-6 text-right text-[10px] text-accent font-light font-sans">MLS #23-1105</td>
+</tr>
+<tr class="border-b border-gray-50 group">
+<td class="py-6">
+<div class="font-serif-luxury text-base text-black">454 Cuesta Way</div>
+<div class="text-[11px] text-accent mt-1">Bel Air, CA 90077</div>
+</td>
+<td class="py-6 font-serif-luxury text-black">$18,400,000</td>
+<td class="py-6 text-accent">Jul 30, 2023</td>
+<td class="py-6"><span class="text-[9px] tracking-widest uppercase border border-gray-200 px-2 py-0.5 rounded-full text-accent">Closed</span></td>
+<td class="py-6 text-right text-[10px] text-accent font-light font-sans">MLS #23-0941</td>
+</tr>
+</tbody>
+</table>
+<div class="py-8 flex justify-center">
+<button class="text-[10px] tracking-[0.3em] text-accent hover:text-black flex items-center gap-2 transition-all">
+                            LOAD MORE <span class="material-symbols-outlined !text-[12px]">expand_more</span>
+</button>
+</div>
+</div>
+</div>
+<div class="mb-12">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-12">
+<h3 class="text-3xl font-serif-luxury font-normal tracking-tight">Active Inventory</h3>
+<div class="flex items-center gap-4">
+<div class="relative border-b border-gray-200">
+<input class="bg-transparent border-none py-2 pl-8 pr-4 text-xs focus:ring-0 w-64 placeholder:text-gray-300" placeholder="Filter by area..." type="text"/>
+<span class="material-symbols-outlined absolute left-0 top-1.5 text-gray-400">search</span>
+</div>
+<select class="bg-transparent border-none text-[10px] uppercase tracking-widest focus:ring-0 cursor-pointer">
+<option>Sort by Price</option>
+<option>Sort by Newest</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
+<div class="group">
+<div class="relative aspect-[4/5] overflow-hidden bg-gray-50 mb-4">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkmdJ-kMgvDKMFTswcfihMVWVa_grt_GlCyyWCyYa-a01kCqw_5qtctJVtaqlgVfGcD8OlpJpzPPGpsmVc0EEOqQNepl78vAyCl3h1fc7ucrV10fJE7-JCVLadiu7QexVWA9_PGqKcvpi2dYombu5cdyefpcHFILNIeyqDI6_8l-jIdqcoAIno755PweBULPPC9FXM3AvBbe5p42VzrOO188aHm3wwYcG8yk7t4K7x4vmNXbdZI5gQMKBz8MkioNq9-f1TNcTDlZ4"/>
+<div class="absolute top-4 left-4">
+<span class="bg-white/90 backdrop-blur-sm text-[9px] tracking-[0.2em] font-medium px-3 py-1.5 uppercase">Just Listed</span>
+</div>
+</div>
+<div class="space-y-1">
+<h4 class="text-base font-serif-luxury font-normal tracking-tight">1122 Nightingale Drive</h4>
+<p class="text-[11px] text-accent tracking-wide uppercase">The Bird Streets, Los Angeles</p>
+<p class="text-sm font-serif-luxury font-normal mt-2">$14,995,000</p>
+<div class="flex items-center gap-4 pt-3 text-[10px] text-accent border-t border-gray-50 mt-4">
+<span>5 Beds</span>
+<span class="w-px h-2 bg-gray-200"></span>
+<span>7 Baths</span>
+<span class="w-px h-2 bg-gray-200"></span>
+<span>8,240 SF</span>
+</div>
+</div>
+</div>
+<div class="group">
+<div class="relative aspect-[4/5] overflow-hidden bg-gray-50 mb-4">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmiv6dPn682SWp8eCIv5VcVAtmCKstvtFGLx7B3w5obtVupd_CLcWGRokOL1t2lQEzQ5bUNjXZk2DIkkqrHo7Gml3YtUJM4gbQ_fXbz3eZJgiISmEWog7a6KcookW5XlWLptulIZ6Tsgf_JNqyoyF5JLPmflp5E7vSkOqdqGUWvPRQVfAJqGxdryTHPr3U9ctWkwObol_zBQ_48qhymmAnTobp2P6Cr_IN5BV1rEniaNiIN8z-1a503kl1szgzQGPytq-UbpEPTOg"/>
+</div>
+<div class="space-y-1">
+<h4 class="text-base font-serif-luxury font-normal tracking-tight">20405 Pacific Coast Hwy</h4>
+<p class="text-[11px] text-accent tracking-wide uppercase">Malibu, CA 90265</p>
+<p class="text-sm font-serif-luxury font-normal mt-2">$8,450,000</p>
+<div class="flex items-center gap-4 pt-3 text-[10px] text-accent border-t border-gray-50 mt-4">
+<span>4 Beds</span>
+<span class="w-px h-2 bg-gray-200"></span>
+<span>5 Baths</span>
+<span class="w-px h-2 bg-gray-200"></span>
+<span>4,100 SF</span>
+</div>
+</div>
+</div>
+<div class="group">
+<div class="relative aspect-[4/5] overflow-hidden bg-gray-50 mb-4">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT0XMUiCS8HQtawe1Yum9f2-a_xkiojaaWqoSPTG0XkhvQ22Dj_zSVuJJYLu7LG6cNvvnNXLNn_Hu3U2BKCIPpzyG2HRVTZMwGP4ovE-ZysTwPaxu4ijukrixY-2isJK-4gTy40n-s7AXZ49krd9lbovCp8deKq9oVoO3qqK08zoOp5_prDJWh4MGOgLJhIbqXgVvJbHclfHnzaxREr5L5Bjv-OGOvl7r4GfqllrFoSME6Yh0wV54Cxqt_qxIPqNKgE3b48WkLti0"/>
+<div class="absolute top-4 left-4">
+<span class="bg-white/90 backdrop-blur-sm text-[9px] tracking-[0.2em] font-medium px-3 py-1.5 uppercase">Exclusive</span>
+</div>
+</div>
+<div class="space-y-1">
+<h4 class="text-base font-serif-luxury font-normal tracking-tight">944 N Croft Avenue</h4>
+<p class="text-[11px] text-accent tracking-wide uppercase">West Hollywood, CA 90069</p>
+<p class="text-sm font-serif-luxury font-normal mt-2">$5,900,000</p>
+<div class="flex items-center gap-4 pt-3 text-[10px] text-accent border-t border-gray-50 mt-4">
+<span>3 Beds</span>
+<span class="w-px h-2 bg-gray-200"></span>
+<span>4 Baths</span>
+<span class="w-px h-2 bg-gray-200"></span>
+<span>3,450 SF</span>
+</div>
+</div>
+</div>
+<div class="group">
+<div class="relative aspect-[4/5] overflow-hidden bg-gray-50 mb-4">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmWBtiPEDosTSBrTBkkK3PmP-XyrAKotoKZ0by1rJcS0-Do2yoKKCUV71mUm4e_S7ZrJKquKxMFeFOEhZG4AbkaZkin1ROrfOC8rB5SJrk-_UJjSI9bNTKjMMI5DP7LwiN1MonmJiO-AaqTXsap5JCizMaBl21XoaATxOtepD0U0VQ0usc-AkBeYEzRaNh5Jg_5L8d-luuwmoviBxx3Gu94UEJ_n3LodSpWsjH8EPwhT79tdZWgYdAaV5xI2AQi5fGDvlVShNxQ_8"/>
+</div>
+<div class="space-y-1">
+<h4 class="text-base font-serif-luxury font-normal tracking-tight">717 N Beverly Drive</h4>
+<p class="text-[11px] text-accent tracking-wide uppercase">Beverly Hills, CA 90210</p>
+<p class="text-sm font-serif-luxury font-normal mt-2">$19,750,000</p>
+<div class="flex items-center gap-4 pt-3 text-[10px] text-accent border-t border-gray-50 mt-4">
+<span>7 Beds</span>
+<span class="w-px h-2 bg-gray-200"></span>
+<span>9 Baths</span>
+<span class="w-px h-2 bg-gray-200"></span>
+<span>12,500 SF</span>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 sticky top-32 h-[calc(100vh-160px)] min-h-[600px] border border-gray-100 bg-gray-50 overflow-hidden">
+<div class="absolute inset-0 grayscale contrast-75 brightness-100 opacity-60">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBs6Y-Oas9rkm4M9rZoLMky0o-rlUe7J44-O-U7u6-8TLuicihu7t7N8xRZdjl1U6RaJ29gmuRWFbOOa8oVjw0KvhmXqLkaH_UWF5RULRqlgUcAvwdjczEKIr9KItU-ZWT5DoOGMGtcJ8wwlfqUYJWIOSPgTkDfk7OfbLFJ4Op2Q4IdgnQdGLxjC_CRaFtlVuRUEO-YMuoqYiQFWffl6X2xBj6mhs9gQZKj9bNf0fbl-VPsIZnwX80pK2VwhItrE6EuP47Ep53C6yg"/>
+</div>
+<div class="absolute inset-0 p-8 flex flex-col justify-between pointer-events-none">
+<div class="relative w-full h-full">
+<div class="absolute top-[20%] left-[40%] pointer-events-auto">
+<div class="bg-white border border-black px-2 py-1 text-[9px] font-medium shadow-sm">$14.9M</div>
+<div class="w-1.5 h-1.5 bg-black rounded-full mx-auto mt-1"></div>
+</div>
+<div class="absolute top-[45%] left-[15%] pointer-events-auto">
+<div class="bg-white border border-black px-2 py-1 text-[9px] font-medium shadow-sm">$8.4M</div>
+<div class="w-1.5 h-1.5 bg-black rounded-full mx-auto mt-1"></div>
+</div>
+<div class="absolute top-[70%] left-[60%] pointer-events-auto">
+<div class="bg-white border border-black px-2 py-1 text-[9px] font-medium shadow-sm">$19.7M</div>
+<div class="w-1.5 h-1.5 bg-black rounded-full mx-auto mt-1"></div>
+</div>
+</div>
+<div class="bg-white/95 backdrop-blur-sm p-6 border border-gray-100 shadow-sm pointer-events-auto">
+<p class="text-[10px] font-medium uppercase tracking-widest mb-1 text-black">Interactive Map</p>
+<p class="text-[11px] text-accent">Discover available estates across Los Angeles.</p>
+<button class="w-full mt-4 py-3 border border-black text-[10px] uppercase tracking-[0.2em] hover:bg-black hover:text-white transition-all">Expand View</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="border-y border-gray-100 py-24 text-center">
+<div class="max-w-3xl mx-auto">
+<h2 class="text-4xl font-normal tracking-tight text-black mb-8 uppercase tracking-[0.15em]">VALUATION REQUEST</h2>
+<p class="text-accent text-sm leading-relaxed mb-12 max-w-xl mx-auto font-light">Interested in the current market value of your residence? Steven provides discreet, data-driven valuations for the world's most significant estates.</p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<button class="px-10 py-3.5 bg-black text-white text-[10px] uppercase tracking-[0.3em] hover:bg-gray-800 transition-all">Get Evaluation</button>
+<button class="px-10 py-3.5 border border-black text-black text-[10px] uppercase tracking-[0.3em] hover:bg-black hover:text-white transition-all">Inquire</button>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-white py-20 px-8 border-t border-gray-50">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-start gap-12 mb-16">
+<div class="max-w-xs">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-6 h-6 border border-black flex items-center justify-center">
+<span class="text-black text-[10px]">SP</span>
+</div>
+<span class="text-xs font-medium uppercase tracking-[0.2em]">Steven D. Park</span>
+</div>
+<p class="text-[11px] text-gray-400 leading-relaxed font-light">DRE #01928374. Providing bespoke real estate services with an emphasis on clarity, strategy, and results across the Los Angeles luxury market.</p>
+</div>
+<div class="flex flex-col gap-4">
+<p class="text-[10px] uppercase tracking-widest font-medium mb-2">Connect</p>
+<div class="flex gap-8 text-[10px] uppercase tracking-[0.2em] text-accent">
+<a class="hover:text-black transition-colors" href="#">Instagram</a>
+<a class="hover:text-black transition-colors" href="#">LinkedIn</a>
+<a class="hover:text-black transition-colors" href="#">Zillow</a>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-gray-50 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-widest text-gray-400 font-light">
+<div>© 2024 Steven D. Park Real Estate.</div>
+<div class="flex gap-6">
+<a class="hover:text-black" href="#">Privacy Policy</a>
+<a class="hover:text-black" href="#">Terms</a>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>
